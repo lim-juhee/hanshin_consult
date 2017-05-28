@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+ 
+      <div data-role="page" id ="login">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>My Page</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+          <center><img src="../../../assets/img/profile.png" width="40%"></center>
+          <center><button onclick="change_image()">사진 변경</button></center>
+          <label for="s_no">학과 입력 : </label>
+          <input type="id" id="s_no">
+          <label for="s_no">교번 입력 : </label>
+          <input type="id" id="s_no">     
+          <label for="s_no">이름 입력 : </label>
+          <input type="id" id="s_no">    
+          <center><button onclick="save()">저장 하기</button></center>          
+
+
+        </div>
+        <script type="text/javascript">
+          function change_image() {
+          //로컬이미지 불러오기 기능  
+          }
+          function save() {
+            //정보저장
+            location.href ="mypage.html"
+          }
+        </script>
+
+      </div> 
+ 
+  </body>
+</html>

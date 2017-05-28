@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+ 
+      <div data-role="page" id ="login">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>My Page</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+          <center><img src="../../../assets/img/profile.png" width="40%"></center>
+          <ul>
+            <li>학과  :  </li> </label> <label>컴퓨터공학과</label>
+            <li>교번  :  </li> <label > 000001 </label>
+            <li>이름  :  </li> <label > 박성진 </label>
+          </ul>          
+          <center><a href = "change.html" class="ui-btn">정보변경</a></center>
+
+          <script type="text/javascript">
+          function professor_mypage() {
+            location.href ="change.html"
+          }
+        </script>
+
+        </div>
+      </div> 
+ 
+  </body>
+</html>

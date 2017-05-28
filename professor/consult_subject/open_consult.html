@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/indexcss.css">
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../assets/js/click_cal.js"></script>
+    <script src="../assets/js/click_cal.js"></script>
+  </head>
+  <body>
+ 
+      <div data-role="page" id ="open_consult">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>Cousult Hanshin</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+          <center><img src="../../assets/img/symbol.png" width="100%"></center>
+          <label for="date">날짜</label>
+          <input type="date" OnClick="Calendar(this, 'down','no');">
+          <label for="~""> ~ </label>
+          <input type="date" OnClick="Calendar(this, 'down','no');">
+          <label for="time">시간</label>
+          <input type="id" id="time">
+          <label for="con_name">상담명</label>
+          <input type="id" id="con_name">
+          <button onclick="login.html()">개설</button>
+        </div>
+
+        <script type="text/javascript">
+          function student_login() {
+            location.href ="main.html"
+          }
+        </script>
+      </div> 
+ 
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/indexcss.css">
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../assets/js/click_cal.js"></script>
+    <script src="../assets/js/click_cal.js"></script>
+  </head>
+  <body>
+ 
+      <div data-role="page" id ="request">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>Cousult Hanshin</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+          <center><img src="../../assets/img/symbol.png" width="100%"></center>
+          <select name="dept" id="dept" data-inline="true">
+            <option value="">학과선택</option>
+            <option value="num1">신학과</option>
+            <option value="num2">기독교교육학과</option>
+            <option value="num3">국어국문학과</option>
+            <option value="num4">영어영문학과</option>
+            <option value="num5">한국사학과</option>
+            <option value="num6">문예창작학과</option>
+            <option value="num7">독어독문화학전공</option>
+            <option value="num8">철학과</option>
+            <option value="num9">종교문화학</option>
+            <option value="num10">디지털문화콘텐츠학</option>
+            <option value="num11">영상문화학</option>
+            <option value="num12">중국어문화학</option>
+            <option value="num13">한중문화콘텐츠학과</option>
+            <option value="num14">IT콘텐츠학과</option>
+            <option value="num15">국제관계학부</option>
+            <option value="num16">경제학과</option>
+            <option value="num17">사회학과</option>
+            <option value="num18">미디어영상광고홍보학부</option>
+            <option value="num19">사회복지학과</option>
+            <option value="num20">재활학과</option>
+            <option value="num21">특수체육학과</option>
+            <option value="num22">심리·아동학부</option>
+            <option value="num23">글로벌비즈니스학부</option>
+            <option value="num24">중국학과</option>
+            <option value="num25">일본학과</option>
+            <option value="num26">경영학과</option>
+            <option value="num27">IT경영학과</option>
+            <option value="num28">국제경제학과</option>
+            <option value="num29">수리금융학과</option>
+            <option value="num30">응용통계학과</option>
+            <option value="num31">컴퓨터공학부</option>
+            <option value="num32">정보통신학부</option>
+            <option value="num33">아노덴인재학부</option>
+            <option value="num34">상담복지학과</option>
+            <option value="num35">e-비즈니스경영정보학과</option>
+          </select>
+
+          <select name="dept" id="dept" data-inline="true">
+           <option value="">교수선택</option>
+           <option value="num35">박성진</option>
+           <option value="num35">김성기</option>
+           <option value="num35">강영경</option>
+           <option value="num35">임광일</option>
+           <option value="num35">류승택</option>
+           <option value="num35">이형우</option>
+           <option value="num35">한근식</option>
+           <option value="num35">나근식</option>
+           <option value="num35">김대수</option>
+           <option value="num35">전성희</option>
+           </select>
+
+          <label for="date">1순위</label>
+          <input type="date" width="50" OnClick="Calendar(this, 'down','no');">
+          <label for="time">시간</label>
+          <input type="id" id="time">
+          <label for="date">2순위</label>
+          <input type="date" width="50" OnClick="Calendar(this, 'down','no');">
+          <label for="time">시간</label>
+          <input type="id" id="time">
+          <label for="time">사유</label>
+          <input type="id" id="reason">
+          <button onclick="login.html()">상담신청</button>
+        </div>
+
+        <script type="text/javascript">
+          function student_login() {
+            location.href ="main.html"
+          }
+        </script>
+      </div> 
+ 
+  </body>
+</html>

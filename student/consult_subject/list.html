@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <style>
+    .floattingicon {
+        position: fixed; 
+        bottom : 20px;
+        right :20px;
+        width : 10px;
+        color: yellow;
+        background-color:green;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+     }
+     table th{
+      text-align: center;
+     }
+     table td{
+      text-align: left;
+     }
+    </style>
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+ 
+      <div data-role="page" id ="login">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>필수 상담</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+        <input id="myFilter" data-type="search">
+        <table border="1" id = "list_table">
+      
+          <tr>
+            <td>컴퓨터공학</td>
+            <td>박성진</td>
+            <td>종합설계</td>
+          </tr>
+          <tr>
+            <td>중어중문</td>
+            <td>홍길동</td>
+            <td>인증상담</td>
+          </tr>
+         
+        </table>
+
+         <button class="floattingicon">플로팅</button>
+
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+         
+          initSetting();
+        
+        });
+
+        function initSetting(){
+          createTable();
+
+        }
+        function renderTable(){
+
+        }
+        function createTable(){
+          var tr = document.createElement("tr");
+          var td1 = document.createElement("td");
+          $(td1).appendTo(tr).innerHTML("강남");
+          var td2 = document.createElement("td");
+          $(td2).appendTo(tr).innerHTML("ㅇ응ㅇ이");;
+          var td3 = document.createElement("td");
+          $(td3).appendTo(tr).innerHTML("개똥");;
+          
+        }
+        </script>
+
+      </div> 
+  </body>
+</html>
