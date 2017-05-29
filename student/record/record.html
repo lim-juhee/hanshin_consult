@@ -1,62 +1,78 @@
 <!DOCTYPE html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <!--<style type="text/css">
       textarea{
         height: 300px;
       }-->
-    <style>
-    .floattingicon {
-        position: fixed; 
-        bottom : 20px;
-        right : 20px;
-        width : 10px;
-        color: yellow;
-        background-color:green;
-    }
-    </style>
+      <style type="text/css"> 
+        textarea {
+          width: 100%;
+          height: 500px;
+          padding: 20px 20px;
+          box-sizing: border-box;
+          border: 4px solid #ccc;
+          border-radius: 4px;
+          background-color: #f8f8f8;
+          font-size: 16px;
+          resize: none;
+        }
+      </style>
+      <!--
+      <style>
+        .floattingicon {
+          position: fixed; 
+          bottom : 20px;
+          right : 20px;
+          width : 10px;
+          color: yellow;
+          background-color:green;
+        }</style> -->
 
-    </style>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  </head>
-  <body>
- 
-      <div data-role="page" id ="login">
-        <div data-role="header" data-position="fixed" data-add-back-btn="true">
-          <h1>consult record</h1>
-          <a img src="../../../assets/img/save.png" data-iconpos="notext" class="ui-btn-right">save</a> <!--저장이미지 버튼..???-->
-        </div>
-  
-      <form action="">
-        상담 기록 ▼
-      <form name="form1">
-      <textarea rows="5" name="S1" cols="30" >16.05.16 박성진 교수님 상담 어쩌고저쩌고ㅇㅇ어ㅏㅇ아우ㅇ엉ㅓㅎ
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      </textarea>
-      </form>
-
-      </form>
-      </div> 
-      
-      
-      <button class="floattingicon">플로팅</button>
-      <!--<img src="../../../assets/img/floatting.png" width="10%">-->
-      
-
-      <script type="text/javascript">
-          function student_record() {
-            location.href ="record.html"
+        <style type="text/css">
+          img {
+            float: right;
+            margin: 1000px 0px 5px 5px;
           }
-      </script>
-  </body>
-</html>
+        </style>
+
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+      </head>
+      <body>
+
+        <div data-role="page" id ="login">
+          <div data-role="header" data-position="fixed" data-add-back-btn="true">
+            <h1>consult record</h1>
+            <a img src="../../../../assets/img/save.png" data-iconpos="notext" class="ui-btn-right">save</a> <!--헤더바 저장버튼..이미지는??-->
+          </div>
+
+          <p><strong>◆Tip:</strong> Write down the conversation details.</p>
+          <form>
+            <textarea> Some text......
+            ~
+            ~
+            ~
+            ~
+            ~
+            ~ </textarea> <!-- 내용입력하면 창이 늘어나ㅠ-->
+          </form>
+
+          <div>
+            <p><a href = "list.html" class="ui-btn"><img src="../../../../assets/img/floating.png" width="6.5%" class="ui-btn-right"></a></p> <!-- 아래 플로팅 + 버튼 , 이상해ㅐ 이거아니야 안되서 가짜버튼만든겋 ㅠㅜㅠ -->
+          </div> 
+
+
+
+          <script type="text/javascript">
+            function student_record() {
+              location.href ="record.html"
+            }
+          </script>
+
+
+        </body>
+        </html>
