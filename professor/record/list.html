@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head> -->
+  <body>
+ 
+      <div data-role="page" id ="p_record_list">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>상담 기록 내역</h1>
+        </div>
+       
+        <div data-role="content" class="ui-content">
+          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="p-record-list">
+          </ul>
+          
+        </div>
+
+        <script type="text/javascript">
+          $(document).on("pageshow", function(){
+            var mockdata = [{
+              professor : "홍길동"
+              ,department : "동에번쩍부"
+              ,subject : "개인상담"
+            },{professor : "김참새"
+              ,department : "컴퓨터공학부"
+              ,subject : "울음소리 상담"
+            },{professor : "장흥신"
+              ,department : "컴퓨터공학부"
+              ,subject : "전공상담"
+            }];
+
+            refreshConsultList(mockdata, "#p-record-list")
+          });
+
+
+          // 리스트를 새로고침하는 함수, 데이터 배열을 받아와 매개변수로 사용
+          // arr 은 데이터 배열, el은 id 
+          // [{
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }, ...]
+          function refreshConsultList(arr,el){
+            $(el).empty(); // refresh. 내부 아이템 모두 삭제
+
+            for(var i = 0, len = arr.length; i < len; i++){
+              var data = arr[i];
+              var li = createListItem(data);
+              $(el).append(li).listview("refresh");
+            }
+
+          }
+
+          // 리스트 아이템을 생성하는 함수. append는 안함
+          // data는 객체
+          // {
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }
+          function createListItem(data){
+            var li = document.createElement("li");
+            $(li).html([
+               '<a href="record.html">'
+               , listItemStrFormat(data)
+               ,'</a>'
+            ].join("")); 
+
+            return li;
+          }
+
+          // 학과명, 교수명, 과목이름을 포맷에 맞게 조합하는 함수
+          // data는 객체
+          // {
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }
+          function listItemStrFormat(data) {
+            return [data.subject, "-", data.department, ["(", data.professor, ")"].join("")].join("");
+          }
+
+
+        </script>
+
+      </div> 
+  </body>
+</html>

@@ -14,8 +14,10 @@
         </div>
        
         <div data-role="content" class="ui-content">
-          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="consult-list">
+          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="s-subject-list">
           </ul>
+
+          <a href = "open_consult.html" class="ui-btn"> 개설하기 </a>
           
         </div>
 
@@ -33,7 +35,7 @@
               ,subject : "인터넷보안"
             }];
 
-            refreshConsultList(mockdata, "#consult-list")
+            refreshConsultList(mockdata, "#s-subject-list")
           });
 
 
