@@ -1,16 +1,22 @@
 <!DOCTYPE html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        $( document ).bind( "mobileinit", function(){
+        $.mobile.page.prototype.options.degradeInputs.date = 'text';
+        });
+        </script>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/indexcss.css">
-  
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.datetimepicker.css"/>
+    <style type="text/css"> </style>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../assets/js/click_cal.js"></script>
-    <script src="../assets/js/click_cal.js"></script>
+    <script type="text/javascript" src="/js/egovframework/mbl/cmm/datepicker/jquery.mobile.datebox.js"></script>
+
   </head>
   <body>
- 
+
       <div data-role="page" id ="request">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>Cousult Hanshin</h1>
@@ -72,24 +78,29 @@
            </select>
 
           <label for="date">1순위</label>
-          <input type="date" width="50" OnClick="Calendar(this, 'down','no');">
+          <input name="mydate" id="defandroid" type="date" data-role="datebox" data-options='{"mode": "calbox"}' >
           <label for="time">시간</label>
-          <input type="id" id="time">
+          <input name="mydate" id="mydate" type="time" data-role="datebox" data-options='{"mode": "timebox", "timeFormat": 12}'>
           <label for="date">2순위</label>
-          <input type="date" width="50" OnClick="Calendar(this, 'down','no');">
+          <input name="mydate" id="defandroid" type="date" data-role="datebox" data-options='{"mode": "calbox"}' >
           <label for="time">시간</label>
-          <input type="id" id="time">
-          <label for="time">사유</label>
+          <input name="mydate" id="mydate" type="time" data-role="datebox" data-options='{"mode": "timebox", "timeFormat": 12}'>
+          <label for="date">3순위</label>
+          <input name="mydate" id="defandroid" type="date" data-role="datebox" data-options='{"mode": "calbox"}' >
+          <label for="time">시간</label>
+          <input name="mydate" id="mydate" type="time" data-role="datebox" data-options='{"mode": "timebox", "timeFormat": 12}'>
+          <label for="reason">사유</label>
           <input type="id" id="reason">
           <button onclick="login.html()">상담신청</button>
-        </div>
-
-        <script type="text/javascript">
-          function student_login() {
-            location.href ="main.html"
-          }
-        </script>
+        </div>  
       </div> 
  
   </body>
+
+  <script type="text/javascript">
+     function student_login() {
+       location.href ="main.html"
+      }
+
+  </script>
 </html>
