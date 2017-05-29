@@ -26,7 +26,8 @@
         <script type="text/javascript">
           function student_login() {
             // 학번검사하기()
-            location.href ="main.html"
+            var num = document.getElementById("s_no");
+            location.href ="s_login.php?num="+num.value;
           }
         </script>
       </div> 
