@@ -1,82 +1,91 @@
 <!DOCTYPE html>
-  <head>
+  <!-- <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <style>
-    .floattingicon {
-        position: fixed; 
-        bottom : 20px;
-        right :20px;
-        width : 10px;
-        color: yellow;
-        background-color:green;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-     }
-     table th{
-      text-align: center;
-     }
-     table td{
-      text-align: left;
-     }
-    </style>
   
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  </head>
+  </head> -->
   <body>
  
-      <div data-role="page" id ="login">
+      <div data-role="page" id ="s_subject_list">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>필수 상담</h1>
         </div>
        
         <div data-role="content" class="ui-content">
-        <input id="myFilter" data-type="search">
-        <table border="1" id = "list_table">
-      
-          <tr>
-            <td>컴퓨터공학</td>
-            <td>박성진</td>
-            <td>종합설계</td>
-          </tr>
-          <tr>
-            <td>중어중문</td>
-            <td>홍길동</td>
-            <td>인증상담</td>
-          </tr>
-         
-        </table>
-
-         <button class="floattingicon">플로팅</button>
-
-        </div>
-        <script type="text/javascript">
-        $(document).ready(function() {
-         
-          initSetting();
-        
-        });
-
-        function initSetting(){
-          createTable();
-
-        }
-        function renderTable(){
-
-        }
-        function createTable(){
-          var tr = document.createElement("tr");
-          var td1 = document.createElement("td");
-          $(td1).appendTo(tr).innerHTML("강남");
-          var td2 = document.createElement("td");
-          $(td2).appendTo(tr).innerHTML("ㅇ응ㅇ이");;
-          var td3 = document.createElement("td");
-          $(td3).appendTo(tr).innerHTML("개똥");;
+          <h3>개설된 상담</h3>
+          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="s-subject-list">
+          </ul>
           
-        }
+        </div>
+
+        <script type="text/javascript">
+          $(document).on("pageshow", function(){
+            var mockdata = [{
+              professor : "박성진"
+              ,department : "컴퓨터공학부"
+              ,subject : "종합설계"
+            },{professor : "최창원"
+              ,department : "컴퓨터공학부"
+              ,subject : "네트워크통신"
+            },{professor : "이형우"
+              ,department : "컴퓨터공학부"
+              ,subject : "인터넷보안"
+            }];
+
+            refreshConsultList(mockdata, "#s-subject-list")
+          });
+
+
+          // 리스트를 새로고침하는 함수, 데이터 배열을 받아와 매개변수로 사용
+          // arr 은 데이터 배열, el은 id 
+          // [{
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }, ...]
+          function refreshConsultList(arr,el){
+            $(el).empty(); // refresh. 내부 아이템 모두 삭제
+
+            for(var i = 0, len = arr.length; i < len; i++){
+              var data = arr[i];
+              var li = createListItem(data);
+              $(el).append(li).listview("refresh");
+            }
+
+          }
+
+          // 리스트 아이템을 생성하는 함수. append는 안함
+          // data는 객체
+          // {
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }
+          function createListItem(data){
+            var li = document.createElement("li");
+            $(li).html([
+               '<a href="request.html">'
+               , listItemStrFormat(data)
+               ,'</a>'
+            ].join("")); 
+
+            return li;
+          }
+
+          // 학과명, 교수명, 과목이름을 포맷에 맞게 조합하는 함수
+          // data는 객체
+          // {
+          //    professor : "박성진"
+          //    ,department : "컴퓨터공학부"
+          //    ,subject : "종합설계"
+          // }
+          function listItemStrFormat(data) {
+            return [data.subject, "-", data.department, ["(", data.professor, ")"].join("")].join("");
+          }
+
+
         </script>
 
       </div> 

@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="./detail.css">
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <div data-role="page" id ="detail">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>상담 내역</h1>
+        </div>
+  <body>
+   <div id="counsel_wrap">
+      <div id="counsel_title">
+         상담 에약 신청이 들어왔습니다.
+      </div>
+      <div id="counsel_content">
+         <div class="img_wrap">
+            <img src="#">
+         </div>
+         <div class="info_wrap">
+            <table>
+               <tr>
+                  <td>학과</td>
+                  <td><input type="text"></td>
+               </tr>
+               <tr>
+                  <td>학년</td>
+                  <td><input type="text"></td>
+               </tr>
+               <tr>
+                  <td>학번</td>
+                  <td><input type="text"></td>
+               </tr>
+               <tr>
+                  <td>이름</td>
+                  <td><input type="text"></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="counsel_check">
+         <input type="radio" name="chk"> 1순위  4/4 3시<br>
+         <input type="radio" name="chk"> 2순위  4/5 5시
+      </div>
+      <div id="counsel_submit">
+         <input type="button" value="승낙" class="counsel_btn">
+         <input type="button" value="거절" class="counsel_btn">
+      </div>
+   </div>
+</body>
+</html>

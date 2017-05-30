@@ -113,3 +113,51 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+.ui-title {
+    /*헤더 글자 공간 늘리기*/
+    margin : 0px;
+}
+
+/*플루팅버튼*/
+    .floatting_btn {
+        width: 100px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+/*detail page*/
+    #counsel_wrap{
+        width: 100%;
+        text-align: center;
+    }
+
+    #counsel_title{
+        background: green;
+        width: 350px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 auto 20px auto;
+        border-radius: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #counsel_content > .img_wrap{
+        display: inline-block;
+    }
+    #counsel_content > .img_wrap img{
+        width: 100px;
+        height: 150px;
+    }
+    #counsel_content > .info_wrap{
+        display: inline-block;  
+    }
+
+    #counsel_check{
+        width: 350px;
+        text-align: center;
+        margin: 10px auto 20px auto;
+    }

@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <!--<style type="text/css">
-      textarea{
-        height: 300px;
-      }-->
-    <style>
-    .floattingicon {
-        position: fixed; 
-        bottom : 20px;
-        right : 20px;
-        width : 10px;
-        color: yellow;
-        background-color:green;
-    }
-    </style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-    </style>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
- 
-      <div data-role="page" id ="login">
+
+      <div data-role="page" id ="s_record">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>consult record</h1>
           <a img src="../../../assets/img/save.png" data-iconpos="notext" class="ui-btn-right">save</a> <!--저장이미지 버튼..???-->
         </div>
-  
-      <form action="">
-        상담 기록 ▼
-      <form name="form1">
-      <textarea rows="5" name="S1" cols="30" >16.05.16 박성진 교수님 상담 어쩌고저쩌고ㅇㅇ어ㅏㅇ아우ㅇ엉ㅓㅎ
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      ~
-      </textarea>
-      </form>
+        <div data-role="content" class="ui-content">
+          <form action="">
+            상담 기록 ▼
+          <form name="form1">
+          <textarea rows="5" name="S1" cols="30" >16.05.16 박성진 교수님 상담 어쩌고저쩌고ㅇㅇ어ㅏㅇ아우ㅇ엉ㅓㅎ
+          ~
+          ~
+          ~
+          ~
+          ~
+          ~
+          ~
+          ~
+          ~
+          </textarea>
+          </form>
 
-      </form>
-      </div> 
-      
-      
-      <button class="floattingicon">플로팅</button>
-      <!--<img src="../../../assets/img/floatting.png" width="10%">-->
-      
-
-      <script type="text/javascript">
+          </form>
+        </div>
+        <script type="text/javascript">
           function student_record() {
-            location.href ="record.html"
-          }
-      </script>
+        }
+        </script>
+      </div> 
   </body>
 </html>
+
+      
+      
+        
