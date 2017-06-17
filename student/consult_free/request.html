@@ -1,15 +1,8 @@
 <!DOCTYPE html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript">
-        $( document ).bind( "mobileinit", function(){
-        $.mobile.page.prototype.options.degradeInputs.date = 'text';
-        });
-        </script>
+    
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.datetimepicker.css"/>
-    <style type="text/css"> </style>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="/js/egovframework/mbl/cmm/datepicker/jquery.mobile.datebox.js"></script>
@@ -25,57 +18,57 @@
         </div>
        
         <div data-role="content" class="ui-content">
-          <select name="dept" id="dept" data-inline="true">
-            <option value="">학과선택</option>
-            <option value="num1">신학과</option>
-            <option value="num2">기독교교육학과</option>
-            <option value="num3">국어국문학과</option>
-            <option value="num4">영어영문학과</option>
-            <option value="num5">한국사학과</option>
-            <option value="num6">문예창작학과</option>
-            <option value="num7">독어독문화학전공</option>
-            <option value="num8">철학과</option>
-            <option value="num9">종교문화학</option>
-            <option value="num10">디지털문화콘텐츠학</option>
-            <option value="num11">영상문화학</option>
-            <option value="num12">중국어문화학</option>
-            <option value="num13">한중문화콘텐츠학과</option>
-            <option value="num14">IT콘텐츠학과</option>
-            <option value="num15">국제관계학부</option>
-            <option value="num16">경제학과</option>
-            <option value="num17">사회학과</option>
-            <option value="num18">미디어영상광고홍보학부</option>
-            <option value="num19">사회복지학과</option>
-            <option value="num20">재활학과</option>
-            <option value="num21">특수체육학과</option>
-            <option value="num22">심리·아동학부</option>
-            <option value="num23">글로벌비즈니스학부</option>
-            <option value="num24">중국학과</option>
-            <option value="num25">일본학과</option>
-            <option value="num26">경영학과</option>
-            <option value="num27">IT경영학과</option>
-            <option value="num28">국제경제학과</option>
-            <option value="num29">수리금융학과</option>
-            <option value="num30">응용통계학과</option>
-            <option value="num31">컴퓨터공학부</option>
-            <option value="num32">정보통신학부</option>
-            <option value="num33">아노덴인재학부</option>
-            <option value="num34">상담복지학과</option>
-            <option value="num35">e-비즈니스경영정보학과</option>
+          <select name="dept" id="dept_select" data-inline="true">
+            <option >학과선택</option>
+            <option value="신학과">신학과</option>
+            <option value="기독교교육학과">기독교교육학과</option>
+            <option value="국어국문학과">국어국문학과</option>
+            <option value="영어영문학과">영어영문학과</option>
+            <option value="한국사학과">한국사학과</option>
+            <option value="문예창작학과">문예창작학과</option>
+            <option value="독어독문화학전공">독어독문화학전공</option>
+            <option value="철학과">철학과</option>
+            <option value="종교문화학">종교문화학</option>
+            <option value="디지털문화콘텐츠학">디지털문화콘텐츠학</option>
+            <option value="영상문화학">영상문화학</option>
+            <option value="중국어문화학">중국어문화학</option>
+            <option value="한중문화콘텐츠학과">한중문화콘텐츠학과</option>
+            <option value="IT">IT콘텐츠학과</option>
+            <option value="국제관계학부">국제관계학부</option>
+            <option value="경제학과">경제학과</option>
+            <option value="사회학과">사회학과</option>
+            <option value="미디어영상광고홍보학부">미디어영상광고홍보학부</option>
+            <option value="사회복지학과">사회복지학과</option>
+            <option value="재활학과">재활학과</option>
+            <option value="특수체육학과">특수체육학과</option>
+            <option value="심리·아동학부">심리·아동학부</option>
+            <option value="글로벌비즈니스학부">글로벌비즈니스학부</option>
+            <option value="중국학과">중국학과</option>
+            <option value="일본학과">일본학과</option>
+            <option value="경영학과">경영학과</option>
+            <option value="IT">IT경영학과</option>
+            <option value="국제경제학과">국제경제학과</option>
+            <option value="수리금융학과">수리금융학과</option>
+            <option value="응용통계학과">응용통계학과</option>
+            <option value="컴퓨터공학부">컴퓨터공학부</option>
+            <option value="정보통신학부">정보통신학부</option>
+            <option value="아노덴인재학부">아노덴인재학부</option>
+            <option value="상담복지학과">상담복지학과</option>
+            <option value="e-비즈니스경영정보학과">e-비즈니스경영정보학과</option>
           </select>
 
-          <select name="dept" id="dept" data-inline="true">
+          <select name="professor" id="professor_select" data-inline="true">
            <option value="">교수선택</option>
-           <option value="num35">박성진</option>
-           <option value="num35">김성기</option>
-           <option value="num35">강영경</option>
-           <option value="num35">임광일</option>
-           <option value="num35">류승택</option>
-           <option value="num35">이형우</option>
-           <option value="num35">한근식</option>
-           <option value="num35">나근식</option>
-           <option value="num35">김대수</option>
-           <option value="num35">전성희</option>
+           <option value="박성진">박성진</option>
+           <option value="김성기">김성기</option>
+           <option value="강영경">강영경</option>
+           <option value="임광일">임광일</option>
+           <option value="류승택">류승택</option>
+           <option value="이형우">이형우</option>
+           <option value="한근식">한근식</option>
+           <option value="나근식">나근식</option>
+           <option value="김대수">김대수</option>
+           <option value="전성희">전성희</option>
            </select>
 
           <label for="date">1순위</label>
@@ -96,9 +89,14 @@
         </div>  
           <script type="text/javascript">
              function request() {
-              //내용 저장하기
+              //내용 저장하기,
                
               }
+            
+            $( document ).bind( "mobileinit", function(){
+            $.mobile.page.prototype.options.degradeInputs.date = 'text';
+            });
+       
 
           </script>
       </div> 

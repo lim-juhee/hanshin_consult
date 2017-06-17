@@ -1,163 +1,106 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
-}
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
+/*헤더를 꾸며보자*/
+    div[data-role=header] {
+        background-color: white !important;
+        color: #2663a3 !important;
+        font-weight: bold !important;
+        border-top: 10px solid #2663a3 !important;
+        border-style: solid !important;
+        
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
     }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
-}
-
-
-.ui-title {
-    /*헤더 글자 공간 늘리기*/
-    margin : 0px;
-}
-
-/*플루팅버튼*/
-    .floatting_btn {
-        width: 100px;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
+    .ui-header .ui-title, .ui-footer .ui-title {
+        overflow :visible !important;
     }
     
-/*detail page*/
-    #counsel_wrap{
-        width: 100%;
-        text-align: center;
+    /*.ui-icon-back:after{
+        background-image : url(../img/arrow.png) !important;
+        border-radius : 0px !important;
+        background-size: 20px;
+        color:#2663a3 ;
+        background-color: white;
+    }*/
+     .ui-icon-back{
+        border :none;
+     }
+
+
+    div[data-role=page] {
+        background-color: white ;
+        color:#2663a3;
     }
 
-    #counsel_title{
-        background: green;
-        width: 350px;
-        height: 30px;
-        line-height: 30px;
-        margin: 0 auto 20px auto;
-        border-radius: 20px;
-        color: white;
-        font-weight: bold;
+    
+/*버튼 배경색,테두리 색*/
+    .btns .ui-btn ,
+    button, ul .ui-btn,.ui-block-a .ui-btn{
+        background-color: white !important;
+        border-color:#2663a3 !important;
+        color:#2663a3 !important;
+    }
+    .ui-block-b .ui-btn{
+        background-color: #2663a3 !important;
+        border-color:#2663a3 !important;
+        color:white !important;
+        text-shadow: none;
+    }
+    .ui-toolbar-back-btn, .ui-btn-right{
+        background-color: white !important;
+        border: none !important;
+        color:#2663a3 !important;
+        box-shadow: none !important;
     }
 
-    #counsel_content > .img_wrap{
+    /*login화면*/
+    hr {
+        border :1px solid #e7b90f
+    }
+
+    .ui-nodisc-icon .ui-alt-icon{
+        color:red;
+    }
+
+
+/*플루팅버튼*/
+    #floatting_btn {
+
+        width: 70px;
+        position: fixed;
+        bottom: 20px;
+        padding: 0px;
+        right: 20px;
+        border-radius: 100px;
+        height: 70px;
+        background-color: #e7b90f ;
+        box-shadow: 0px 0.5px 3px 0px;
+        border: none;
+        text-shadow: none;
+    }
+
+    #floatting_btn >span{
+        color:white;
+        text-shadow: none;
+        margin-top: 20px;
         display: inline-block;
+        font-size: 20pt
     }
-    #counsel_content > .img_wrap img{
-        width: 100px;
-        height: 150px;
+    #floatting_btn > img {
+        padding-top: 15px;
+        padding-left: 3px;
+        width: 40px;
     }
-    #counsel_content > .info_wrap{
-        display: inline-block;  
+    
+    /*라디오번튼*/
+    div.ui-radio label.ui-btn {
+         border-color : transparent; 
+         background-color : transparent 
+     }
+    div.ui-radio input { 
+        visibility : hidden;
     }
 
-    #counsel_check{
-        width: 350px;
-        text-align: center;
-        margin: 10px auto 20px auto;
-    }
+    /*detail에서 사진ㅇ옆에 개인정보*/
+   div .discript {
+        margin-left: 20px;
+   }

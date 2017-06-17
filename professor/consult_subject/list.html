@@ -11,13 +11,17 @@
       <div data-role="page" id ="p_subject_list">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>필수 상담</h1>
+          <!-- <a href="open_consult.html" class="ui-btn-right ui-btn">개설</a> -->
         </div>
        
         <div data-role="content" class="ui-content">
-          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="s-subject-list">
+          <ul data-role="listview" data-inset="true" id="s-subject-list" class="ui-nodisc-icon ui-alt-icon">
           </ul>
 
-          <a href = "open_consult.html" class="ui-btn"> 개설하기 </a>
+          <!-- <a href = "open_consult.html" class="ui-btn" id="floatting_btn"> <span>개설</span> </a> -->
+          <a href = "open_consult.html" class="ui-btn" id="floatting_btn">
+          <img src="../../assets/img/add.png">
+          </a>
           
         </div>
 
@@ -27,12 +31,12 @@
               professor : "박성진"
               ,department : "컴퓨터공학부"
               ,subject : "종합설계"
-            },{professor : "최창원"
+            },{professor : "박성진"
               ,department : "컴퓨터공학부"
-              ,subject : "네트워크통신"
-            },{professor : "이형우"
+              ,subject : "모바일웹프로그래밍"
+            },{professor : "박성진"
               ,department : "컴퓨터공학부"
-              ,subject : "인터넷보안"
+              ,subject : "DB"
             }];
 
             refreshConsultList(mockdata, "#s-subject-list")
@@ -83,7 +87,7 @@
           //    ,subject : "종합설계"
           // }
           function listItemStrFormat(data) {
-            return [data.subject, "-", data.department, ["(", data.professor, ")"].join("")].join("");
+            return ['<h2>',data.subject,'</h2>',"<p>", data.professor, [" (", data.department, ")</p>"].join("")].join("");
           }
 
 

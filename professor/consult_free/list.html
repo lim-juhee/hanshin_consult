@@ -14,7 +14,7 @@
         </div>
        
         <div data-role="content" class="ui-content">
-          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="consult-list">
+          <ul data-role="listview" data-filter="true" data-filter-placeholder="검색어를 입력하세요" data-inset="true" id="p-free-list" class="ui-nodisc-icon ui-alt-icon">
           </ul>
           
         </div>
@@ -22,27 +22,35 @@
         <script type="text/javascript">
           $(document).on("pageshow", function(){
             var mockdata = [{
-              professor : "박성진"
+              student : "임주희"
               ,department : "컴퓨터공학부"
-              ,subject : "종합설계"
-            },{professor : "박성진"
+              ,type : "개인상담"
+              ,date : "2016-5-18"
+              ,time : "17:00"
+            },{student : "장하은"
               ,department : "컴퓨터공학부"
-              ,subject : "인증상담"
-            },{professor : "박성진"
+              ,type : "진로상담"
+              ,date : "2016-5-20"
+              ,time : "13:20"
+            },{student : "정예원"
               ,department : "컴퓨터공학부"
-              ,subject : "심층상담"
+              ,type : "전공상담"
+              ,date : "2016-6-1"
+              ,time : "15:45"
             }];
 
-            refreshConsultList(mockdata, "#consult-list")
+            refreshConsultList(mockdata, "#p-free-list")
           });
 
 
           // 리스트를 새로고침하는 함수, 데이터 배열을 받아와 매개변수로 사용
           // arr 은 데이터 배열, el은 id 
           // [{
-          //    professor : "박성진"
+          //    student : "임주희"
           //    ,department : "컴퓨터공학부"
-          //    ,subject : "종합설계"
+          //    ,type : "개인상담"
+          //    ,date : 2016-5-18
+          //    ,time : 17:00
           // }, ...]
           function refreshConsultList(arr,el){
             $(el).empty(); // refresh. 내부 아이템 모두 삭제
@@ -58,14 +66,16 @@
           // 리스트 아이템을 생성하는 함수. append는 안함
           // data는 객체
           // {
-          //    professor : "박성진"
+          //    student : "임주희"
           //    ,department : "컴퓨터공학부"
-          //    ,subject : "종합설계"
+          //    ,type : "개인상담"
+          //    ,date : 2016-5-18
+          //    ,time : 17:00
           // }
           function createListItem(data){
             var li = document.createElement("li");
             $(li).html([
-               '<a href="request.html">'
+               '<a href="detail.html">'
                , listItemStrFormat(data)
                ,'</a>'
             ].join("")); 
@@ -76,12 +86,14 @@
           // 학과명, 교수명, 과목이름을 포맷에 맞게 조합하는 함수
           // data는 객체
           // {
-          //    professor : "박성진"
+          //    student : "임주희"
           //    ,department : "컴퓨터공학부"
-          //    ,subject : "종합설계"
+          //    ,type : "개인상담"
+          //    ,date : 2016-5-18
+          //    ,time : 17:00
           // }
           function listItemStrFormat(data) {
-            return [data.subject, "-", data.department, ["(", data.professor, ")"].join("")].join("");
+            return ['<h2>',data.date,' ',data.time,'</h2>',"<p>", data.student, [" (", data.department, ") ",data.type,"</p>"].join("")].join("");
           }
 
 
