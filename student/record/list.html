@@ -11,6 +11,7 @@
       <div data-role="page" id ="s_record_list">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>상담 기록 내역</h1>
+          <a href="record.html" class="ui-btn ui-btn-right">추가</a>
         </div>
        
         <div data-role="content" class="ui-content">
@@ -25,12 +26,15 @@
               professor : "박성진"
               ,department : "컴퓨터공학부"
               ,subject : "종합설계"
+              ,date : "2017-02-18"
             },{professor : "최창원"
               ,department : "컴퓨터공학부"
               ,subject : "네트워크통신"
+              ,date : "2017-04-20"
             },{professor : "이형우"
               ,department : "컴퓨터공학부"
               ,subject : "인터넷보안"
+              ,date : "2017-05-10"
             }];
 
             refreshConsultList(mockdata, "#s-record-list")
@@ -81,7 +85,8 @@
           //    ,subject : "종합설계"
           // }
           function listItemStrFormat(data) {
-            return ['<h2>',data.subject,'</h2>',"<p>", data.professor, [" (", data.department, ")</p>"].join("")].join("");
+            return ['<h2>',data.professor,' ',data.subject,'</h2>',
+                    '<p>',data.date,'</p>'].join("");
           }
 
 

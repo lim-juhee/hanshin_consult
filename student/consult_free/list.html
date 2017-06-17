@@ -11,6 +11,7 @@
       <div data-role="page" id ="s_free_list">
         <div data-role="header" data-position="fixed" data-add-back-btn="true">
           <h1>자율 상담 신청 현황</h1>
+          <a href ="request.html" class="ui-btn ui-btn-right">신청하기</a>
         </div>
        
         <div data-role="content" class="ui-content">
@@ -19,25 +20,28 @@
            
           </ul>
           
-          <a href ="request.html" class="floatting_btn ui-btn">신청하기</a> 
+          <!-- <a href ="request.html" id="floatting_btn" class="ui-btn">신청하기</a>  -->
         </div>
 
         <script type="text/javascript">
         //임시데이터
           $(document).on("pageshow", function(){
             var mockdata = [{
-              date : "2017-05-20"
-              ,time : "17:30"
-              ,professor : "박성진"
+              professor : "박성진"
               ,department : "컴퓨터공학부"
-            },{date : "2017-05-21"
+              ,type : "종합설계 상담"
+              ,date : "2017-05-20"
               ,time : "17:30"
-              ,professor : "최창원"
+            },{professor : "최창원"
               ,department : "컴퓨터공학부"
-            },{date : "2017-05-22"
+              ,type : "개인상담"
+              ,date : "2017-05-21"
               ,time : "17:30"
-              ,professor : "이형우"
+            },{professor : "이형우"
               ,department : "컴퓨터공학부"
+              ,type : "성적 상담"
+              ,date : "미승인"
+              ,time : "null"
             }];
 
             refreshConsultList(mockdata, "#s-free-list")
@@ -93,7 +97,8 @@
           // }
          function listItemStrFormat(data) {
             return [
-                '<h2>',data.subject,'</h2>',"<p>", data.professor, [" (", data.department, ")</p>"].join("")].join("");
+                '<h2>',data.professor,' ',data.type,'</h2>',
+                '<p>', data.date,'</p>'].join("");
           }
 
 
