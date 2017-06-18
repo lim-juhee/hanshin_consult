@@ -32,6 +32,7 @@
               ,type : "종합설계 상담"
               ,date : "2017-05-20"
               ,time : "17:30"
+
             },{professor : "최창원"
               ,department : "컴퓨터공학부"
               ,type : "개인상담"
@@ -79,7 +80,7 @@
           function createListItem(data){
             var li = document.createElement("li");
             $(li).html([
-               '<a href="detail.html">'
+               '<a href="sdetail.html">'
                , listItemStrFormat(data)
                ,'</a>'
             ].join("")); 
