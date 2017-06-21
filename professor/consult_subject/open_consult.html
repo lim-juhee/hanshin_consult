@@ -15,17 +15,38 @@
         </div>
        
         <div data-role="content" class="ui-content">
-          <label for="date">날짜</label>
 
-          <input type="date" name="start_day">
-          <label for="~""> ~ </label>
+          <form>
+            <div class="ui-field-contain">
+              <fieldset data-role="controlgroup">
+                <legend>▼상담 (과목) 명</legend>
+                <label for="con_name">상담명</label>
+                <input type="text" id="con_name">
+              </fieldset>
+            </div>
+            <div class="ui-field-contain">
+              <fieldset data-role="controlgroup">
+               <legend >▼기간</legend>
+                <label or="start_day">시작날짜</label>
+                <input type="date" name="start_day">
+                <label for="~""> ~ </label>
+                <input type="date" name="last_day">
+              </fieldset>
+            </div>
 
-          <input type="date" name="last_day">
-          <label for="time">시간</label>
-          <input type="id" id="time" value="setting_time미완"> 
-          <label for="con_name">상담명</label>
-          <input type="id" id="con_name">
-          <button onclick="openConsult.html()">개설</button>
+            <!-- <div class="ui-field-contain ">
+              <fieldset data-role="controlgroup" data-type="horizontal" >
+                <legend>▼Time slot</legend>
+                <input type="radio" name="_10min" id="_10min" value="10분" >
+                <label for="_10min">10분</label>
+                <input type="radio" name="_20min" id="_20min" value="20분">
+                <label for="_20min">20분</label>
+                <input type="radio" name="_30min" id="_30min" value="30분">
+                <label for="_30min">30분</label>
+              </fieldset>
+           </div> -->
+            <button onclick="openConsult.html()">개설</button>
+          </form>
         </div>
 
         <script type="text/javascript">

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id ="s_detail">
+      <div data-role="header" data-position="fixed" data-add-back-btn="true">
+          <h1>자율상담 신청 내역</h1>
+      </div>
+      <div data-role="content">
+
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-c">
+                <img src="../../../assets/img/profile.png">
+              </div>
+            </div>
+            <div class="ui-block-b" >
+              <div class="ui-bar ui-bar-c  discript">
+              <br>
+                <h1>IT대학</h1>
+                <h1>컴퓨터 공학부</h1>
+                <h1>000000000</h1>
+                <h1>박성진</h1>
+              </div>
+            </div>
+          </div>
+        <h1>승인 여부 :<storng><font color="#e7b90f">  승인</strong></i></h1>
+            <hr>
+
+
+        <div class="ui-field-contain">
+            <fieldset data-role="controlgroup">
+              <input type="radio" name="time" value="first" id = "time_first" checked="checked"/>
+              <label for="time_first">1순위 2017-05-20 PM2:00</label>
+              <input type="radio" name="time" value="second" id = "time_second" disabled="disabled"/> 
+              <label for="time_second">2순위 2017-05-20 PM5:00</label>
+              <input type="radio" name="time" value="third" id = "time_third" disabled="disabled"/> 
+              <label for="time_third">3순위 2017-05-11 PM1:00</label>
+            </fieldset>
+        </div>
+      </div>
+      <script type="text/javascript">
+        // $("input[type='radio']").checkboxradio('disable');
+      </script>
+   </div>
+  </body>
+</html>

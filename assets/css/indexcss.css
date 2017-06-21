@@ -93,13 +93,14 @@
     }
     
     /*라디오번튼*/
-    div.ui-radio label.ui-btn {
+     div.ui-radio label.ui-btn {
          border-color : transparent; 
-         background-color : transparent 
+         background-color : transparent ;
      }
     div.ui-radio input { 
         visibility : hidden;
     }
+   
 
     /*detail에서 사진ㅇ옆에 개인정보*/
    div .discript {
